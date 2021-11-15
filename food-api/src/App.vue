@@ -8,6 +8,33 @@
   </div>
 </template>
 
+<script>
+export default {
+  //apiKey 9e4e20197f7246dc982ddf51354c09fd
+  // make variable later
+  data(){
+    return {
+      randomRecipe: []
+    }
+  },
+  created: function (){
+    this.fetchData()
+  },
+  methods: {
+    fetchData: async function () {
+      try {
+        const result = await fetch(`https://api.spoonacular.com/recipes/random?number=1&apiKey=9e4e20197f7246dc982ddf51354c09fd`)
+        const data = await result.json();
+        this.randomRecipe = data
+        console.log(this.randomRecipe)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  }
+}
+</script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
