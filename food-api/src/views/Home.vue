@@ -1,9 +1,5 @@
 <template>
   <div class="home">
-    <header class="header">
-      <h1 class="title">Spoonacular</h1>
-      <div class="cart">Cart (0)</div>
-    </header>
     <h3>View Recipes and Buy Food</h3>
     <form class="search">
       <input class="search-input" type="text" placeholder=" Search..." name="search">
@@ -28,7 +24,7 @@ export default {
  body {
    margin: 0;
  }
- .header {
+ #nav {
    width: 100%;
    height: 10vh;
    display: flex;

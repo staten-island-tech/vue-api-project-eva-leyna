@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <h1 class="title">Spoonacular</h1>
+      <div class="cart">Cart (0)</div>
     </div>
     <router-view />
   </div>
@@ -44,9 +44,6 @@ export default {
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-}
 
 #nav a {
   font-weight: bold;
