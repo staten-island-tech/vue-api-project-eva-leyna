@@ -4,7 +4,7 @@
       <h1 class="title">Spoonacular</h1>
       <div class="cart">Cart (0)</div>
     </div>
-    <router-view />
+    <Daily />
   </div>
 </template>
 
