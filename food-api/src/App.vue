@@ -4,14 +4,19 @@
       <h1 class="title">Spoonacular</h1>
       <div class="cart">Cart (0)</div>
     </div>
+    <router-view/>
     <Daily />
   </div>
 </template>
 
 <script>
+import Daily from "@/components/Daily.vue"
 export default {
   //apiKey 9e4e20197f7246dc982ddf51354c09fd
-  // make variable later
+  // make variable later\
+  components: {
+    Daily,
+  },
   data(){
     return {
       randomRecipe: []
