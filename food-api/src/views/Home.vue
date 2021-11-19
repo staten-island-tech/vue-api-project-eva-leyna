@@ -1,9 +1,10 @@
 <template>
   <div class="home">
     <h3>View Recipes and Buy Food</h3>
-    <form class="search">
-      <input v-model="name" class="search-input" type="text" placeholder=" Search..." name="search">
+    <form @submit.prevent="" class="search">
+      <input v-model="searchInput" class="search-input" type="text" placeholder=" Search..." name="search">
     </form> 
+    <p v-show="searchInput">You're searching for: {{searchInput}}</p>
   </div>
 </template>
 
@@ -15,7 +16,7 @@ export default {
   },
   data() {
     return {
-      name: null,
+      searchInput: null,
     }
   }
 };

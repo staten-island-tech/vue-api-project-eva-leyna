@@ -5,7 +5,10 @@
       <div class="cart">Cart (0)</div>
     </div>
     <router-view/>
-    <Daily />
+    <Daily/>
+      <div v-for="recipe in randomRecipe" :key="recipe.name">
+        {{ recipe.title }}
+      </div>
   </div>
 </template>
 
@@ -28,9 +31,9 @@ export default {
   methods: {
     fetchData: async function () {
       try {
-        const result = await fetch(`https://api.spoonacular.com/recipes/random?number=1&apiKey=9e4e20197f7246dc982ddf51354c09fd`)
+        const result = await fetch(`https://api.spoonacular.com/recipes/random?number=2&apiKey=9e4e20197f7246dc982ddf51354c09fd`)
         const data = await result.json();
-        this.randomRecipe = data
+        this.randomRecipe = data.recipes
         console.log(this.randomRecipe)
       } catch (error) {
         console.log(error)
