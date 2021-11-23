@@ -2,7 +2,12 @@
   <div class="home">
     <h3>View Recipes and Buy Food</h3>
     <form @submit.prevent="" class="search">
-      <input v-model="searchInput" class="search-input" type="text" placeholder=" Search..." name="search">
+      <input 
+      v-model="searchInput"
+      class="search-input"
+      type="text"
+      placeholder=" Search..."
+      name="search">
     </form> 
     <p v-show="searchInput">You're searching for: {{searchInput}}</p>
   </div>
@@ -18,7 +23,8 @@ export default {
     return {
       searchInput: null,
     }
-  }
+  },
+  
 };
 </script>
 
@@ -42,7 +48,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: .1rem black solid;
+  border: 0.1rem black solid;
 }
 .title {
   width: 80%;

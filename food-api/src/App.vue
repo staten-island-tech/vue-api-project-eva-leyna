@@ -6,9 +6,7 @@
     </div>
     <router-view/>
     <Daily/>
-      <div v-for="recipe in randomRecipe" :key="recipe.name">
-        {{ recipe.title }}
-      </div>
+      
   </div>
 </template>
 
@@ -25,9 +23,9 @@ export default {
       randomRecipe: []
     }
   },
-  created: function (){
-    this.fetchData()
-  },
+  // created: function (){
+  //   this.fetchData()
+  // },
   methods: {
     fetchData: async function () {
       try {
