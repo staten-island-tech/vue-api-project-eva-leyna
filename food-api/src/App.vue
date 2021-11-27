@@ -4,6 +4,7 @@
       <h1 class="title">Spoonacular</h1>
       <div class="cart">Cart (0)</div>
     </div>
+    <NavBar/>
     <router-view/>
     <Daily/>
       
@@ -12,32 +13,13 @@
 
 <script>
 import Daily from "@/components/Daily.vue"
+import NavBar from '@/components/NavBar.vue'
 export default {
   //apiKey 9e4e20197f7246dc982ddf51354c09fd
   // make variable later\
   components: {
-    Daily,
+    Daily, NavBar
   },
-  data(){
-    return {
-      randomRecipe: []
-    }
-  },
-  // created: function (){
-  //   this.fetchData()
-  // },
-  methods: {
-    fetchData: async function () {
-      try {
-        const result = await fetch(`https://api.spoonacular.com/recipes/random?number=2&apiKey=9e4e20197f7246dc982ddf51354c09fd`)
-        const data = await result.json();
-        this.randomRecipe = data.recipes
-        console.log(this.randomRecipe)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-  }
 }
 </script>
 
