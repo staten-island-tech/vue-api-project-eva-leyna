@@ -1,6 +1,7 @@
 <template>
   <div class="">
       <h1>{{searchInput}}</h1>
+      <h1 v-show="searchInput">You're searching for: {{searchInput}}</h1>
   </div>
 </template>
 

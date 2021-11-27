@@ -10,7 +10,7 @@
       name="search">
       <router-link :to="{name: 'SearchResults', params: {searchInput: searchInput}}" class="search-submit" :searchInput="searchInput" type="submit">Q</router-link>
     </form> 
-    <p v-show="searchInput">You're searching for: {{searchInput}}</p>
+    
   </div>
 </template>
 
