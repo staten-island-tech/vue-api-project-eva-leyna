@@ -21,6 +21,7 @@ const routes = [
     path: "/results",
     name: "SearchResults",
     component: ResultsShow,
+    props: true,
   },
 ];
 
