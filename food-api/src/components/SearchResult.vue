@@ -1,7 +1,7 @@
 <template>
-  <div class="">
+  <router-link class="" :to="{name: 'RecipeView', params: {id: result.id}}" >
       <h1>{{result.title}}</h1>
-  </div>
+  </router-link>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <div class="">
-      <h1>{{searchInput}}</h1>
+      <h1>Top 10 results for: {{searchInput}}</h1>
       <h1 v-show="searchInput">You're searching for: {{searchInput}}</h1>
       <SearchResult v-for="result in searchResults" :key="result.id" :result="result"/>
   </div>

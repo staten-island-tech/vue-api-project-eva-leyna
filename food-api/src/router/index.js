@@ -2,7 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Cart from "../views/Cart.vue";
-import ResultsShow from "../views/ResultsShow.vue";
+import ResultsList from "../views/ResultsList.vue";
+import RecipeView from "../views/RecipeView.vue";
 
 Vue.use(VueRouter);
 
@@ -20,7 +21,13 @@ const routes = [
   {
     path: "/results",
     name: "SearchResults",
-    component: ResultsShow,
+    component: ResultsList,
+    props: true,
+  },
+  {
+    path: "/results/:id",
+    name: "RecipeView",
+    component: RecipeView,
     props: true,
   },
 ];
