@@ -17,6 +17,7 @@ const routes = [
     path: "/cart",
     name: "Cart",
     component: Cart,
+    props: true,
   },
   {
     path: "/results",

@@ -7,6 +7,7 @@
 </template>
 
 <script>
+// This is page 2
 import SearchResult from '@/components/SearchResult.vue';
 export default {
     components: {

@@ -1,25 +1,32 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <h1 class="title">Spoonacular</h1>
-      <div class="cart">Cart (0)</div>
-    </div>
-    <NavBar/>
-    <router-view/>
-    <Daily/>
+    <NavBar :cart="cart"></NavBar>
+    <router-view @cart-update="cartList"/>
       
   </div>
 </template>
 
 <script>
-import Daily from "@/components/Daily.vue"
+// i dont know how to pass cart data to the cart view but whatever im improvising
+// it works anyways, even if its scuffed
 import NavBar from '@/components/NavBar.vue'
 export default {
   //apiKey 9e4e20197f7246dc982ddf51354c09fd
   // make variable later\
-  components: {
-    Daily, NavBar
+  data() {
+    return {
+      cart: []
+    }
   },
+  components: {
+    NavBar
+  },
+  methods: {
+    cartList: function (cart) {
+      console.log(cart)
+      this.cart.push(cart)
+    }
+  }
 }
 </script>
 

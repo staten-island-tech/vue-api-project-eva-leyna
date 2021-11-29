@@ -1,15 +1,20 @@
 <template>
   <div id="nav" class="nav">
-      <nav>
-          <router-link to="/" >Spoonacular</router-link>
-          <router-link :to="{ name: 'Cart' }">Cart</router-link>
-      </nav>
+    <nav>
+        <router-link to="/" >Spoonacular</router-link>
+        <router-link :to="{ name: 'Cart', params: {cart: cart}}">
+              <div class="" v-if="cart[0]">Cart ({{cart[0].length}})</div>
+              <div class="" v-else >Cart (0)</div>
+        </router-link>
+    </nav>
   </div>
 </template>
 
 <script>
 export default {
-
+    props: {
+        cart: Array
+    }
 }
 </script>
 
