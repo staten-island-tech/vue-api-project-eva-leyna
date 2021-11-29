@@ -20,7 +20,7 @@ const routes = [
     props: true,
   },
   {
-    path: "/results",
+    path: "/results/:searchInput",
     name: "SearchResults",
     component: ResultsList,
     props: true,

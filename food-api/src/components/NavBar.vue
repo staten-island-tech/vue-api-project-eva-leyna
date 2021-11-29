@@ -1,8 +1,8 @@
 <template>
-  <div id="nav" class="nav">
-    <nav>
-        <router-link to="/" >Spoonacular</router-link>
-        <router-link :to="{ name: 'Cart', params: {cart: cart}}">
+  <div id="nav" >
+    <nav class="nav-links">
+        <router-link class="title" to="/" >Spoonacular</router-link>
+        <router-link class="cart" :to="{ name: 'Cart', params: {cart: cart}}">
               <div class="" v-if="cart[0]">Cart ({{cart[0].length}})</div>
               <div class="" v-else >Cart (0)</div>
         </router-link>
@@ -22,15 +22,9 @@ export default {
 body {
   margin: 0;
 }
-#nav {
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: bisque;
-  }
+/* #nav {
+  
+  } */
 .cart {
   width: 10%;
   height: 90%;
@@ -39,10 +33,23 @@ body {
   justify-content: center;
   align-items: center;
   border: 0.1rem black solid;
+  font-size: 1.5rem;
 }
 .title {
   width: 80%;
+  text-decoration: none;
   margin: auto 3rem;
   text-align: center;
+  font-size: 2.5rem;
+}
+.nav-links {
+    width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #293670;
+  color: white;
 }
 </style>
